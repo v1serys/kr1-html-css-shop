@@ -437,3 +437,110 @@ main {
   margin: 0 auto;
   padding: var(--space-lg);
 }
+/* ===============================
+   11. Позиционирование и дополнительные компоненты (КР №1)
+   =============================== */
+
+/* Карточка товара как relative-контейнер для absolute-бейджа */
+.product-card {
+  position: relative;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border-radius: var(--radius-sm);
+}
+
+/* Sticky-фильтр на странице каталога */
+.catalog-filters {
+  position: sticky;
+  top: var(--space-md);
+}
+
+/* Fixed-кнопка быстрой прокрутки «Наверх» */
+.scroll-top-btn {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+}
+
+.scroll-top-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Стили таблицы характеристик */
+.product-table {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-top: var(--space-md);
+  border-collapse: collapse;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.product-table__caption {
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  text-align: left;
+  color: var(--color-muted);
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-table th {
+  background-color: var(--color-surface);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.product-table tbody tr:hover {
+  background-color: var(--color-surface-accent);
+}
+
+/* Стили формы на отдельной странице */
+.order-form--page {
+  max-width: 600px;
+  margin-top: var(--space-lg);
+}
+
+.product-detail__actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
