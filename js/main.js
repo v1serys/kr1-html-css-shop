@@ -47,3 +47,16 @@ orderForm.addEventListener('submit', (event) => {
   orderForm.reset()
   orderDialog.close()
 })
+// Обработка формы на отдельной странице заказа
+const orderPageForm = document.getElementById('order-page-form')
+if (orderPageForm) {
+  orderPageForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    if (!orderPageForm.checkValidity()) {
+      orderPageForm.reportValidity()
+      return
+    }
+    alert('Заказ успешно оформлен!')
+    orderPageForm.reset()
+  })
+}
