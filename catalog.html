@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Каталог товаров интернет-магазина TechPulse."
+    />
+    <title>Каталог товаров — TechPulse</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">TechPulse</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="catalog.html"
+                >Каталог</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Товар</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Оформить заказ</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Каталог</span>
+      </nav>
+
+      <section class="section">
+        <h1 class="section__title">Каталог гаджетов и аксессуаров</h1>
+        <p>
+          Выберите подходящие устройства для работы, гейминга и отдыха.
+          Воспользуйтесь фильтрами слева для быстрого подбора по бюджету и
+          категории.
+        </p>
+      </section>
+
+      <section class="catalog-layout">
+        <aside class="catalog-filters">
+          <h2 class="catalog-filters__title">Фильтры</h2>
+          <form class="filters-form" action="#" method="get">
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Категория</legend>
+              <label class="filters-form__label">
+                <input type="checkbox" name="category" value="all" checked />
+                Все товары
+              </label>
+              <label class="filters-form__label">
+                <input type="checkbox" name="category" value="popular" />
+                Популярные
+              </label>
+              <label class="filters-form__label">
+                <input type="checkbox" name="category" value="new" />
+                Новинки
+              </label>
+            </fieldset>
+
+            <fieldset class="filters-form__group">
+              <legend class="filters-form__legend">Цена (руб.)</legend>
+              <label class="filters-form__label" for="price-from">От</label>
+              <input
+                class="filters-form__input"
+                id="price-from"
+                name="price-from"
+                type="number"
+                min="0"
+                placeholder="0"
+              />
+              <label class="filters-form__label" for="price-to">До</label>
+              <input
+                class="filters-form__input"
+                id="price-to"
+                name="price-to"
+                type="number"
+                min="0"
+                placeholder="20000"
+              />
+            </fieldset>
+
+            <button class="button button--primary" type="submit">
+              Применить
+            </button>
+          </form>
+        </aside>
+
+        <section class="catalog-products">
+          <h2 class="catalog-products__title">Список товаров</h2>
+          <div class="products-grid">
+            <article class="product-card product-card--featured">
+              <span class="product-card__badge">Хит</span>
+              <img
+                class="product-card__image"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                alt="Наушники Pulse Audio Pro"
+              />
+              <h3 class="product-card__title">Наушники Pulse Audio Pro</h3>
+              <p class="product-card__description">
+                Беспроводные наушники с активным шумоподавлением и мягкими
+                амбушюрами.
+              </p>
+              <p class="product-card__price">Цена: 12 990 руб.</p>
+              <a
+                class="button button--secondary product-card__button"
+                href="product.html"
+                >Подробнее</a
+              >
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-card__image"
+                src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=600&q=80"
+                alt="Клавиатура KeyChronos K8"
+              />
+              <h3 class="product-card__title">Клавиатура KeyChronos K8</h3>
+              <p class="product-card__description">
+                Компактная механика с тактильными переключателями Gateron Brown.
+              </p>
+              <p class="product-card__price">Цена: 8 490 руб.</p>
+              <a
+                class="button button--secondary product-card__button"
+                href="index.html#popular"
+                >Подробнее</a
+              >
+            </article>
+
+            <article class="product-card product-card--discount">
+              <span class="product-card__badge">-20%</span>
+              <img
+                class="product-card__image"
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                alt="Смарт-часы ChronoFit X"
+              />
+              <h3 class="product-card__title">Смарт-часы ChronoFit X</h3>
+              <p class="product-card__description">
+                Умные часы с GPS-трекером, пульсометром и более 100 режимами
+                тренировок.
+              </p>
+              <p class="product-card__price">Цена: 9 990 руб.</p>
+              <a
+                class="button button--secondary product-card__button"
+                href="index.html#popular"
+                >Подробнее</a
+              >
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-card__image"
+                src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=600&q=80"
+                alt="Беспроводная мышь GlideMaster Pro"
+              />
+              <h3 class="product-card__title">Мышь GlideMaster Pro</h3>
+              <p class="product-card__description">
+                Эргономичная беспроводная мышь с оптическим сенсором 26 000 DPI.
+              </p>
+              <p class="product-card__price">Цена: 5 490 руб.</p>
+              <a
+                class="button button--secondary product-card__button"
+                href="index.html#popular"
+                >Подробнее</a
+              >
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-card__image"
+                src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+                alt="Портативная колонка BassBoom Mini"
+              />
+              <h3 class="product-card__title">Колонка BassBoom Mini</h3>
+              <p class="product-card__description">
+                Мощный звук 360°, защита от влаги IPX7 и работа до 18 часов без
+                подзарядки.
+              </p>
+              <p class="product-card__price">Цена: 6 200 руб.</p>
+              <a
+                class="button button--secondary product-card__button"
+                href="index.html#popular"
+                >Подробнее</a
+              >
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-card__image"
+                src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=600&q=80"
+                alt="Студийный микрофон VoiceCast USB"
+              />
+              <h3 class="product-card__title">Микрофон VoiceCast USB</h3>
+              <p class="product-card__description">
+                Конденсаторный USB-микрофон для подкастов, стримов и чистой
+                записи голоса.
+              </p>
+              <p class="product-card__price">Цена: 7 900 руб.</p>
+              <a
+                class="button button--secondary product-card__button"
+                href="index.html#popular"
+                >Подробнее</a
+              >
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>&copy; 2026 Интернет-магазин «TechPulse». Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </footer>
+  </body>
+</html>
